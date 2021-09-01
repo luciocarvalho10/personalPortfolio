@@ -1,0 +1,11 @@
+{
+  "verbose": true,
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "delay": 2000,
+  "watch": [
+    "public/"
+  ]
+}
