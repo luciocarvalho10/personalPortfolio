@@ -153,3 +153,120 @@ body {
   text-transform: captalize;
   border: none;
 }
+
+.image {
+  overflow: hidden;
+  width: 400px;
+  height: 500px;
+  border-radius: 30% 30% 50% 35%;
+}
+
+/* about section */
+.about {
+  width: 100%;
+  height: auto;
+  padding: 50px 10vw;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 500;
+  font-size: 3.5rem;
+  text-transform: capitalize
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px;
+  opacity: 0.7;
+}
+
+.seperator {
+  width: 25%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.about-me-container {
+  margin: 150px 0 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-gap: 50px;
+}
+
+.left-col, .right-col {
+  position: relative;
+}
+
+.left-col::before {
+  content: 'yes, its me';
+  text-transform: capitalize;
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
+
+.left-col::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 80px;
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  transform-origin: right;
+  transform: rotate(-30deg);
+}
+
+.about-image {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.about-para {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 35px;
+  margin-bottom: 40px;
+}
+
+/* about section skills */
+.skills-container {
+  position: relative;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.skill-card {
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #464646;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.skill {
+  font-size: 2rem;
+  color: #464646;
+  line-height: 200px;
+}
+
+.skill-card:hover {
+  background: var(--bg);
+}
+
+.skill-card:hover .skill {
+  color: #fff;
+}
+
+.skill-card.large {
+  grid-column: 4 span;
+}
