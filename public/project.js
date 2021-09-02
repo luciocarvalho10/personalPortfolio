@@ -1,7 +1,7 @@
 let projects = [
   {
     name: 'project one',
-    tags: '#vuejs',
+    tags: '#vuejs, #javascript',
     image: 'project01.png'
   },
 ]
