@@ -11,6 +11,6 @@ let app = express()
 app.use(express.static(initialPath))
 app.use(express.json())
 
-app.get('/', (req, res) => res.sendFile(path.join(initialPath, 'index.html')))
+app.get('/', (req, res) => {res.sendFile(path.join(initialPath, 'index.html'))})
 
-app.listen(3000, () => console.log('listen door 3000 at ' + new Date()))
+app.listen(3000, () => {console.log('listen door 3000 at ' + new Date())})
