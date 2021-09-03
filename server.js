@@ -12,11 +12,11 @@ app.use(express.static(initialPath))
 app.use(express.json())
 
 app.get('/', (req, res) => {res.sendFile(path.join(initialPath, 'index.html'))})
-app.post('mail', (req, res) => {
+app.post('/mail', (req, res) => {
   const { firstname, lastname, email, msg } = req.body
 
   const transporter = nodemailer.createTransport({
-    service: 'outlook',
+    service: 'Hotmail',
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASSWORD
@@ -24,9 +24,9 @@ app.post('mail', (req, res) => {
   })
 
   const mailOptions = {
-    from: 'sender email',
-    to: 'receiver email',
-    subject: 'Postfolio',
+    from: email,
+    to: process.env.EMAIL,
+    subject: 'Portfolio',
     text: `First name: ${firstname}, \nLast name: ${lastname}, \nEmail: ${email}, \nMessage: ${msg}`
   }
 
