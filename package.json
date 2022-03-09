@@ -2,7 +2,7 @@
   "name": "personalportfolio",
   "version": "1.0.0",
   "description": "Personal Portfolio",
-  "main": "index.js",
+  "main": "public/index.html",
   "scripts": {
     "start": "nodemon server.js"
   },
